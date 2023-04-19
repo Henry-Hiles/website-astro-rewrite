@@ -1,0 +1,23 @@
+---
+import projects from "../projects.json"
+import styles from "../styles/Portfolio.module.css"
+import Divider from "./Divider.astro"
+---
+
+<section id="portfolio">
+	<h2>My Projects</h2>
+	<Divider />
+	<article class={styles.portfolioItems}>
+		{
+			projects.map((project, index) => (
+				<a href={`/projects/${index}#`}>
+					<img
+						src={`/images/${project.thumbImage}`}
+						alt={project.name}
+					/>
+					<h3 class={styles.projectName}>{project.name}</h3>
+				</a>
+			))
+		}
+	</article>
+</section>

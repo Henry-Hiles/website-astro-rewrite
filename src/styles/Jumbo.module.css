@@ -1,0 +1,18 @@
+#jumbo {
+	color: var(--text-primary);
+	font-size: 2em;
+	padding: 3rem 0 0;
+	text-align: center;
+}
+
+#jumbo img {
+	width: 200px;
+}
+
+#jumbo i {
+	margin: 20px 0 30px;
+}
+
+#jumbo #shortAbout {
+	padding: 20px;
+}

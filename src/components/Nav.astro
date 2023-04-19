@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon"
+import styles from "../styles/Nav.module.css"
+---
+
+<!-- export const Nav = ({ lightTheme, setLightTheme }) => { --><!-- class={y == 0 ? "" : styles.navbarShrink} -->
+<nav class={styles.nav} data-expanded="true">
+	<ul class={styles.links}>
+		<li>
+			<a href="/#">Home</a>
+		</li>
+		<li>
+			<a href="/#portfolio">My Projects</a>
+		</li>
+		<li>
+			<a href="/#about">About Me</a>
+		</li>
+		<li>
+			<button id="themeToggle">
+				<Icon name="ph:sun-fill" />
+				<!-- <Icon name="ph:moon-fill" /> -->
+			</button>
+		</li>
+		<li>
+			<a
+				target="_blank"
+				rel="noreferrer"
+				href="https://github.com/Henry-Hiles"
+			>
+				<Icon name="mdi:github" />
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<script defer>
+	const dataset = document.querySelector(`nav`)?.dataset
+	document.addEventListener("scroll", () => {
+		if (dataset) {
+			if (window.scrollY > 0) dataset.expanded = false
+			else dataset.expanded = true
+		}
+	})
+
+	const body = document.querySelector("body")
+	const themeToggle = document.querySelector("#themeToggle")
+	themeToggle.addEventListener("click", () => body.classList.toggle("light"))
+</script>

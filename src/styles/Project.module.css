@@ -1,0 +1,76 @@
+#container {
+	width: 100%;
+}
+
+.overview {
+	width: 100%;
+	padding: 20px;
+	font-size: x-large;
+	text-align: center;
+}
+
+.screenshot {
+	width: 40%;
+	padding: 20px;
+}
+
+#jumbo {
+	padding: 3em 0 0;
+}
+
+.longDescription {
+	font-size: 1.5rem;
+	padding: 20px;
+	text-align: justify;
+	max-width: 700px;
+}
+
+.image {
+	max-width: 900px;
+}
+
+.image img {
+	width: 100%;
+}
+
+.longDescription h2 {
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	text-align: center;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 4rem;
+}
+
+.row > * {
+	flex: 1;
+}
+
+#details {
+	padding: 2rem;
+}
+
+@media (max-width: 1300px) {
+	.row {
+		flex-direction: column;
+	}
+}
+
+.buttonRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.buttonRow > * {
+	flex: 1;
+}

@@ -1,0 +1,74 @@
+---
+import ButtonLink from "../../components/ButtonLink.astro"
+import Divider from "../../components/Divider.astro"
+import RoundDivider from "../../components/RoundDivider.astro"
+import styles from "../../styles/Project.module.css"
+import Layout from "../../layouts/Layout.astro"
+import projects from "../../projects.json"
+
+export function getStaticPaths() {
+	return projects.map((_, id) => ({ params: { id: id } }))
+}
+
+const { id: idParam } = Astro.params
+const id = Number(idParam)
+const project = projects[id]
+---
+
+<Layout page={project.name}>
+	<div id={styles.container}>
+		<section id={styles.jumbo}>
+			<h1 class={styles.title}>{project.name}</h1>
+			<Divider />
+			<p class={styles.overview}>{project.overview}</p>
+			<RoundDivider />
+		</section>
+		<section id={styles.details}>
+			<div class={styles.row}>
+				<article class={styles.longDescription}>
+					<h2>Description</h2>
+					<Divider />
+					<section>
+						<p>
+							{project.description}
+							{project.technologies}
+						</p>
+						<div class={styles.buttonRow}>
+							{
+								project.github && (
+									<ButtonLink href={project.github} newTab>
+										Source Code
+									</ButtonLink>
+								)
+							}
+							{
+								project.demoLink && (
+									<ButtonLink href={project.demoLink} newTab>
+										Go to demo
+									</ButtonLink>
+								)
+							}
+							{
+								project.customLink && (
+									<ButtonLink
+										href={project.customLink.link}
+										newTab
+									>
+										{project.customLink.name}
+									</ButtonLink>
+								)
+							}
+						</div>
+					</section>
+				</article>
+				<article class={styles.image}>
+					<img
+						src={`/images/${project.computerImages[0]}`}
+						alt={`Image of ${project.name}`}
+						class={styles.screenshot}
+					/>
+				</article>
+			</div>
+		</section>
+	</div>
+</Layout>
