@@ -3,8 +3,7 @@ import { Icon } from "astro-icon"
 import styles from "../styles/Nav.module.css"
 ---
 
-<!-- export const Nav = ({ lightTheme, setLightTheme }) => { --><!-- class={y == 0 ? "" : styles.navbarShrink} -->
-<nav class={styles.nav} data-expanded="true">
+<nav class={styles.nav} aria-expanded="true">
 	<ul class={styles.links}>
 		<li>
 			<a href="/#">Home</a>
@@ -16,10 +15,10 @@ import styles from "../styles/Nav.module.css"
 			<a href="/#about">About Me</a>
 		</li>
 		<li>
-			<button id="themeToggle">
-				<Icon name="ph:sun-fill" />
-				<!-- <Icon name="ph:moon-fill" /> -->
-			</button>
+			<div id="themeToggle">
+				<div aria-hidden="false"><Icon name="ph:sun-fill" /></div>
+				<div aria-hidden="true"><Icon name="ph:moon-fill" /></div>
+			</div>
 		</li>
 		<li>
 			<a
@@ -31,18 +30,35 @@ import styles from "../styles/Nav.module.css"
 			</a>
 		</li>
 	</ul>
-</nav>
 
-<script defer>
-	const dataset = document.querySelector(`nav`)?.dataset
-	document.addEventListener("scroll", () => {
-		if (dataset) {
-			if (window.scrollY > 0) dataset.expanded = false
-			else dataset.expanded = true
+	<script defer>
+		let nav = document.querySelector(`nav`)
+		document.addEventListener("scroll", () => {
+			if (nav) nav.setAttribute("aria-expanded", window.scrollY == 0)
+		})
+
+		const body = document.querySelector("body")
+		const themeToggle = document.querySelector("#themeToggle")
+		const icons = document.querySelectorAll("#themeToggle > div")
+		let lightMode = localStorage.getItem("lightMode") === "true" || false
+		const setLightMode = () => {
+			localStorage.setItem("lightMode", lightMode)
+			if (lightMode) body.classList.add("light")
+			else body.classList.remove("light")
+			icons[0].setAttribute("aria-hidden", !lightMode)
+			icons[1].setAttribute("aria-hidden", lightMode)
+			icons.forEach((icon) =>
+				icon.setAttribute(
+					"aria-hidden",
+					icon.getAttribute("aria-hidden") === "false"
+				)
+			)
 		}
-	})
+		setLightMode()
 
-	const body = document.querySelector("body")
-	const themeToggle = document.querySelector("#themeToggle")
-	themeToggle.addEventListener("click", () => body.classList.toggle("light"))
-</script>
+		themeToggle.addEventListener("click", () => {
+			lightMode = !lightMode
+			setLightMode()
+		})
+	</script>
+</nav>

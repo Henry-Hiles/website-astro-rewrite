@@ -13,8 +13,12 @@
 	gap: 20px;
 }
 
+.nav [aria-hidden="true"] {
+	display: none;
+}
+
 @media (min-width: 600px) {
-	.nav[data-expanded="false"] {
+	.nav[aria-expanded="false"] {
 		padding: 1rem;
 		width: unset;
 		top: 10px;
@@ -23,7 +27,7 @@
 		padding: 0;
 	}
 
-	.nav[data-expanded="true"] {
+	.nav[aria-expanded="true"] {
 		font-size: 1.5em;
 	}
 
