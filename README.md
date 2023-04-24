@@ -1,2 +1,2 @@
 # Website Astro Rewrite
-A rewrite of henryhiles.com using Astro instead of ASP.Net Core Razor Pages.
+A rewrite of https://henryhiles.com using Astro instead of ASP.Net Core Razor Pages.
