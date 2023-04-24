@@ -74,7 +74,6 @@ jobs:
         run: |
           pnpx astro build \
             --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
         
       - name: Upload artifact
