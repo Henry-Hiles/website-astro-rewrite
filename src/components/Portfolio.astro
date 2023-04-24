@@ -12,7 +12,7 @@ import Divider from "./Divider.astro"
 			projects.map((project, index) => (
 				<a href={`/projects/${index}`}>
 					<img
-						src={`images/${project.thumbImage}`}
+						src={`/images/${project.thumbImage}`}
 						alt={project.name}
 					/>
 					<h3 class={styles.projectName}>{project.name}</h3>
