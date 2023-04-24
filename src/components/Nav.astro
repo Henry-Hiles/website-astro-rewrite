@@ -16,8 +16,12 @@ import styles from "../styles/Nav.module.css"
 		</li>
 		<li>
 			<div id="themeToggle">
-				<div aria-hidden="false"><Icon name="ph:sun-fill" /></div>
-				<div aria-hidden="true"><Icon name="ph:moon-fill" /></div>
+				<button aria-hidden="false" title="Switch to light mode"
+					><Icon name="ph:sun-fill" /></button
+				>
+				<button aria-hidden="true" title="Switch to dark mode"
+					><Icon name="ph:moon-fill" /></button
+				>
 			</div>
 		</li>
 		<li>
@@ -39,7 +43,7 @@ import styles from "../styles/Nav.module.css"
 
 		const body = document.querySelector("body")
 		const themeToggle = document.querySelector("#themeToggle")
-		const icons = document.querySelectorAll("#themeToggle > div")
+		const icons = document.querySelectorAll("#themeToggle > button")
 		let lightMode = localStorage.getItem("lightMode") === "true" || false
 		const setLightMode = () => {
 			localStorage.setItem("lightMode", lightMode)
