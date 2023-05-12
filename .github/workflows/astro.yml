@@ -64,7 +64,7 @@ jobs:
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
           
       - name: Copy files to VM
-        run: rsync -chav --delete ${{ env.BUILD_PATH }}/dist ${{ secrets.USER_AND_IP }}:/var/www/HenryHilesAstro/tmp
+        run: rsync -chav --delete ${{ env.BUILD_PATH }}/dist/* ${{ secrets.USER_AND_IP }}:/var/www/HenryHilesAstro/tmp
         
       - name: Execute remote command
         run: ssh ${{ secrets.USER_AND_IP }} sudo /var/www/deploy-astro.sh astro.henryhiles.com HenryHilesAstro
