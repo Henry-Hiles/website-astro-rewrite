@@ -67,4 +67,4 @@ jobs:
         run: rsync -chav --delete ${{ env.BUILD_PATH }} ${{ secrets.USER_AND_IP }}:/var/www/HenryHiles/tmp
         
       - name: Execute remote command
-        run: ssh ${{ secrets.USER_AND_IP }} sudo /var/www/deploy-astro.sh www.henryhiles.com HenryHiles
+        run: ssh ${{ secrets.USER_AND_IP }} sudo /var/www/deploy-astro.sh astro.henryhiles.com HenryHilesAstro
