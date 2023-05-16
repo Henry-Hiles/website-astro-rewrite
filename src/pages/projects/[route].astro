@@ -7,12 +7,12 @@ import Layout from "../../layouts/Layout.astro"
 import projects from "../../projects.json"
 
 export function getStaticPaths() {
-	return projects.map((_, id) => ({ params: { id: id } }))
+	return projects.map((project) => ({ params: { route: project.route } }))
 }
 
-const { id: idParam } = Astro.params
-const id = Number(idParam)
-const project = projects[id]
+const { route } = Astro.params
+const project = projects.find((project) => project.route === route)
+if (project == null) return
 ---
 
 <Layout page={project.name}>
@@ -63,7 +63,7 @@ const project = projects[id]
 				</article>
 				<article class={styles.image}>
 					<img
-						src={`/images/${project.computerImages[0]}`}
+						src={`/images/${project.computerImage}`}
 						alt={`Image of ${project.name}`}
 						class={styles.screenshot}
 					/>
