@@ -1,15 +1,17 @@
 ---
-import styles from "../styles/NotFound.module.css"
+import styles from "../styles/404.module.css"
 import Layout from "../layouts/Layout.astro"
+import Divider from "../components/Divider.astro"
 ---
 
 <Layout page="Not Found">
 	<div id={styles.notFound}>
-		<h1 id={styles.header}>Page not found.</h1>
+		<h1 id={styles.header}>Page Not Found</h1>
+		<Divider />
 		<span id={styles.description}>
-			We couldn't find that page. Please return to our <a href="/">
-				home page
-			</a>.
+			We couldn't find that page. Please return to our <a href="/"
+				>home page</a
+			>.
 		</span>
 	</div>
 </Layout>

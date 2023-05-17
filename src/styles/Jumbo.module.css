@@ -14,5 +14,6 @@
 }
 
 #jumbo #shortAbout {
-	padding: 20px 0;
+	display: block;
+	padding: 20px 10px;
 }
