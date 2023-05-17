@@ -42,7 +42,7 @@ svg {
 
 section:not(section section) {
 	background: var(--secondary);
-	padding: 10rem 0;
+	padding: 3rem 0;
 }
 
 section:nth-child(2n):not(section section) {
