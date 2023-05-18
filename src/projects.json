@@ -14,16 +14,6 @@
 		"thumbImage": "quadraticBot.png"
 	},
 	{
-		"name": "Flappy Bird",
-		"route": "flappy-bird",
-		"github": "https://github.com/Henry-Hiles/FlappyBird",
-		"overview": "A simple flappy bird game, made with html elements, CSS, and JavaScript. Made without using canvas.",
-		"description": "A simple flappy bird game, made with the technologies listed below. This project uses a modular design, with many JS files working together. It uses ES6 arrow functions instead of regular functions.",
-		"technologies": "This project was built using handcrafted HTML, CSS, and JavaScript, and canvas wasn't used. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
-		"mainImage": "flappyComputer.png",
-		"thumbImage": "flappyThumb.jpg"
-	},
-	{
 		"name": "PokeAPI Searcher",
 		"route": "pokeapi-searcher",
 		"github": "https://github.com/Henry-Hiles/PokeAPI-Searcher",
@@ -86,5 +76,16 @@
 		"mainImage": "QWeatherMain.png",
 		"thumbImage": "QWeatherThumb.svg",
 		"demoLink": "https://nightly.link/Henry-Hiles/QWeather/workflows/build/main/QWeather.zip"
+	},
+	{
+		"name": "QScan",
+		"route": "qscan",
+		"github": "https://github.com/Henry-Hiles/Qscan",
+		"overview": "QScan is a Material You/Material 3 app for scanning QR codes",
+		"description": "QScan is an open-source Material You/Material 3 app for scanning QR codes, written in Jetpack Compose. Uses the zxing library for scanning.",
+		"technologies": "This project was written in Kotlin, using Jetpack Compose. The zxing library was used for scanning.",
+		"mainImage": "QScanMain.png",
+		"thumbImage": "QScanThumb.svg",
+		"demoLink": "https://nightly.link/Henry-Hiles/QScan/workflows/build/master/QScan.zip"
 	}
 ]
