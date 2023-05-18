@@ -10,7 +10,6 @@
 }
 
 .screenshot {
-	width: 40%;
 	padding: 20px;
 }
 
@@ -25,12 +24,8 @@
 	max-width: 700px;
 }
 
-.image {
-	max-width: 900px;
-}
-
 .image img {
-	width: 100%;
+	max-height: 500px;
 }
 
 .longDescription h2 {
@@ -47,10 +42,6 @@
 	align-items: center;
 	justify-content: space-evenly;
 	gap: 4rem;
-}
-
-.row > * {
-	flex: 1;
 }
 
 #details {
