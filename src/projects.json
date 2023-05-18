@@ -31,7 +31,7 @@
 		"github": "https://github.com/Henry-Hiles/PokeAPI-Searcher",
 		"overview": "A simple website where you can search for Pokemon by type or Pokedex. Uses the PokeAPI for data.",
 		"description": "A simple website where you can search for Pokemon by type or Pokedex. Uses the PokeAPI for data. Made purely of HTML, CSS, and Vanilla Javascript. Uses the Fetch API for querying the PokeAPI.",
-		"technologies": "This project was built using handcrafted HTML, CSS, and JavaScript, and canvas wasn't used. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
+		"technologies": "This project was built using handcrafted HTML, CSS, and JavaScript. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
 		"computerImage": "pokeAPIComputer.png",
 		"mobileImage": "pokeAPIMobile.png",
 		"thumbImage": "pokeAPIThumb.png"
@@ -68,5 +68,17 @@
 		"technologies": "This project was built using React and CSS Modules.",
 		"computerImage": "mentalMathComputer.png",
 		"thumbImage": "mentalMathThumb.webp"
+	},
+	{
+		"name": "Movie React App",
+		"route": "movie-react-app",
+		"github": "https://github.com/henry-Hiles/movie-react-app",
+		"overview": "A website to find movies, written in React.",
+		"description": "An open-source website to find movies, written in React. Includes a client-side only rating system. Uses the TMDB API for data.",
+		"technologies": "This project was built using React and CSS Modules.",
+		"computerImage": "movieComputer.png",
+		"mobileImage": "movieMobile.png",
+		"thumbImage": "movieThumb.svg",
+		"demoLink": "https://movies.henryhiles.com"
 	}
 ]
