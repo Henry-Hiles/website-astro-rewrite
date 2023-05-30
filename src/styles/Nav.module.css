@@ -1,39 +1,11 @@
 .nav {
-	background: var(--secondary);
-	color: var(--primary-text);
-	padding-top: 1.5rem;
-	overflow: auto;
+	padding: 0.5rem;
 	display: flex;
 	font-size: 1.3em;
+	overflow-y: auto;
 	font-weight: bold;
-	transition: padding 0.5s, font-size 0.5s;
-	width: 100%;
-	z-index: 1;
-	top: 0;
-	gap: 20px;
-}
-
-.nav [aria-hidden="true"] {
-	display: none;
-}
-
-@media (min-width: 600px) {
-	.nav[aria-expanded="false"] {
-		padding: 1rem;
-		width: unset;
-		top: 10px;
-		border-radius: 100px;
-		border: 3px solid var(--primary);
-		padding: 0;
-	}
-
-	.nav[aria-expanded="true"] {
-		font-size: 1.5em;
-	}
-
-	.nav {
-		position: sticky;
-	}
+	background: hsl(0 0% 0% / 0.4);
+	font-size: 1.5em;
 }
 
 .links svg {
@@ -41,7 +13,7 @@
 }
 
 .nav button {
-	background-color: transparent;
+	background: transparent;
 	border: none;
 	cursor: pointer;
 	color: inherit;

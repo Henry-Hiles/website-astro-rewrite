@@ -1,0 +1,35 @@
+:root {
+	color-scheme: dark light;
+	scroll-behavior: smooth;
+
+	--primary: hsl(211 26% 39%);
+	--secondary: hsl(209 28% 29%);
+	--secondary-hover: hsl(209 28% 19%);
+	--text-primary: hsl(0 0% 100%);
+	--secondary-text: hsl(211 26% 39%);
+}
+
+body {
+	font-family: "Lato", -apple-system, Roboto, "Helvetica Neue", Arial,
+		"Noto Sans", sans-serif;
+	margin: 0;
+	background-attachment: fixed;
+	background-image: url("/images/background.jpg");
+	backdrop-filter: blur(10px);
+	color: var(--text-primary);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+svg {
+	vertical-align: middle;
+	font-size: 0.75rem;
+}
+
+img {
+	max-width: 100%;
+}

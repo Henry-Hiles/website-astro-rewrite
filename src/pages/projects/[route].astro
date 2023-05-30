@@ -1,7 +1,6 @@
 ---
 import ButtonLink from "../../components/ButtonLink.astro"
 import Divider from "../../components/Divider.astro"
-import RoundDivider from "../../components/RoundDivider.astro"
 import styles from "../../styles/Project.module.css"
 import Layout from "../../layouts/Layout.astro"
 import projects from "../../projects.json"
@@ -16,59 +15,56 @@ if (project == null) return
 ---
 
 <Layout page={project.name}>
-	<div id={styles.container}>
+	<main>
 		<section id={styles.jumbo}>
 			<h1 class={styles.title}>{project.name}</h1>
 			<Divider />
 			<p class={styles.overview}>{project.overview}</p>
-			<RoundDivider />
 		</section>
-		<section id={styles.details}>
-			<div class={styles.row}>
-				<article class={styles.longDescription}>
-					<h2>Description</h2>
-					<Divider />
-					<section>
-						<p>
-							{project.description}
-							{project.technologies}
-						</p>
-						<div class={styles.buttonRow}>
-							{
-								project.github && (
-									<ButtonLink href={project.github} newTab>
-										Source Code
-									</ButtonLink>
-								)
-							}
-							{
-								project.demoLink && (
-									<ButtonLink href={project.demoLink} newTab>
-										Go to demo
-									</ButtonLink>
-								)
-							}
-							{
-								project.customLink && (
-									<ButtonLink
-										href={project.customLink.link}
-										newTab
-									>
-										{project.customLink.name}
-									</ButtonLink>
-								)
-							}
-						</div>
-					</section>
-				</article>
-				<article class={styles.image}>
-					<img
-						src={`/images/${project.mainImage}`}
-						alt={`Image of ${project.name}`}
-						class={styles.screenshot}
-					/>
-				</article>
-			</div>
+		<section id={styles.details} class={styles.row}>
+			<article class={styles.longDescription}>
+				<h2>Description</h2>
+				<Divider />
+				<section>
+					<p>
+						{project.description}
+						{project.technologies}
+					</p>
+					<div class={styles.buttonRow}>
+						{
+							project.github && (
+								<ButtonLink href={project.github} newTab>
+									Source Code
+								</ButtonLink>
+							)
+						}
+						{
+							project.demoLink && (
+								<ButtonLink href={project.demoLink} newTab>
+									Go to demo
+								</ButtonLink>
+							)
+						}
+						{
+							project.customLink && (
+								<ButtonLink
+									href={project.customLink.link}
+									newTab
+								>
+									{project.customLink.name}
+								</ButtonLink>
+							)
+						}
+					</div>
+				</section>
+			</article>
+			<article class={styles.image}>
+				<img
+					src={`/images/${project.mainImage}`}
+					alt={`Image of ${project.name}`}
+					class={styles.screenshot}
+				/>
+			</article>
 		</section>
-	</div>
+	</main>
 </Layout>

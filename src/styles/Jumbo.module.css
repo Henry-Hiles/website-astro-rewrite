@@ -1,27 +1,22 @@
 #jumbo {
 	color: var(--text-primary);
 	font-size: 2em;
-	padding: 3rem 0 0;
 	text-align: center;
-}
-
-/* #jumbo > div {
+	padding: 0;
+	padding: 3rem 0 0;
 	height: 100vh;
-} */
+}
 
 #jumbo i {
 	margin: 20px 0 30px;
 }
 
+#jumbo #logoLong {
+	width: 60rem;
+	max-width: 90%;
+}
+
 #jumbo #shortAbout {
 	display: block;
 	padding: 20px 10px;
-}
-
-#logo {
-	width: 25rem;
-}
-
-#logo {
-	color: aqua;
 }

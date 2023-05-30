@@ -31,7 +31,7 @@
 		"description": "A simple, open-source, online chat room where you can join online chat rooms, or create your own.",
 		"technologies": "This project was built using handcrafted Javascript, as well as Node.js, Socket.io, and Express.",
 		"mainImage": "messagingComputer.png",
-		"thumbImage": "messagingThumb.png",
+		"thumbImage": "messagingThumb.svg",
 		"demoLink": "https://chat.henryhiles.com"
 	},
 	{
@@ -53,7 +53,7 @@
 		"description": "A simple project to help with learning addition and subtraction. You can change the amount of numbers, and switch between addition and subtraction modes.",
 		"technologies": "This project was built using React and CSS Modules.",
 		"mainImage": "mentalMathComputer.png",
-		"thumbImage": "mentalMathThumb.webp"
+		"thumbImage": "mentalMathThumb.svg"
 	},
 	{
 		"name": "Movie React App",

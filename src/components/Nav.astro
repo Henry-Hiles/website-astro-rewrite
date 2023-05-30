@@ -15,16 +15,6 @@ import styles from "../styles/Nav.module.css"
 			<a href="/#about">About Me</a>
 		</li>
 		<li>
-			<div id="themeToggle">
-				<button aria-hidden="false" title="Switch to light mode"
-					><Icon name="ph:sun-fill" /></button
-				>
-				<button aria-hidden="true" title="Switch to dark mode"
-					><Icon name="ph:moon-fill" /></button
-				>
-			</div>
-		</li>
-		<li>
 			<a
 				target="_blank"
 				rel="noreferrer"
@@ -34,35 +24,4 @@ import styles from "../styles/Nav.module.css"
 			</a>
 		</li>
 	</ul>
-
-	<script defer>
-		let nav = document.querySelector(`nav`)
-		document.addEventListener("scroll", () => {
-			if (nav) nav.setAttribute("aria-expanded", window.scrollY == 0)
-		})
-
-		const body = document.querySelector("body")
-		const themeToggle = document.querySelector("#themeToggle")
-		const icons = document.querySelectorAll("#themeToggle > button")
-		let lightMode = localStorage.getItem("lightMode") === "true" || false
-		const setLightMode = () => {
-			localStorage.setItem("lightMode", lightMode)
-			if (lightMode) body.classList.add("light")
-			else body.classList.remove("light")
-			icons[0].setAttribute("aria-hidden", !lightMode)
-			icons[1].setAttribute("aria-hidden", lightMode)
-			icons.forEach((icon) =>
-				icon.setAttribute(
-					"aria-hidden",
-					icon.getAttribute("aria-hidden") === "false"
-				)
-			)
-		}
-		setLightMode()
-
-		themeToggle.addEventListener("click", () => {
-			lightMode = !lightMode
-			setLightMode()
-		})
-	</script>
 </nav>

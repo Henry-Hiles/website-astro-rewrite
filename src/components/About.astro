@@ -3,77 +3,63 @@ import styles from "../styles/About.module.css"
 import Divider from "./Divider.astro"
 ---
 
-<section class={styles.about} id="about">
-	<h2>About</h2>
+<section class={styles.about}>
+	<h2>About Me</h2>
 	<Divider />
-	<div class={styles.row}>
-		<article>
+	<article class={styles.textArticle}>
+		<p>
+			Hello, my name is Henry Hiles, Full Stack Developer. I have
+			extensive experience with React, SolidJS, Node.js, and ASP.NET Razor
+			Pages. I have used my Node.js knowledge to create{" "}
+			<a href="/projects/quadraticbot2.0">QuadraticBot 2.0</a>, a giveaway
+			bot for discord.
+		</p>
+		<p>
+			For more projects, check out{" "}
+			<a
+				href="https://github.com/Henry-Hiles"
+				target="_blank"
+				rel="noreferrer"
+			>
+				my GitHub profile.
+			</a>
+		</p>
+	</article>
+	<a href="https://github.com/Henry-Hiles" target="_blank" rel="noreferrer">
+		<section class={styles.row}>
 			<img
 				src={`https://raw.githubusercontent.com/Henry-Hiles/github-stats/master/generated/overview.svg#gh-dark-mode-only`}
 				alt="My Github Stats"
 			/>
-		</article>
-		<section>
-			<article class={styles.textArticle}>
-				<p>
-					Hello, my name is Henry Hiles, Full Stack Developer. I have
-					extensive experience with React, SolidJS, Node.js, and
-					ASP.NET Razor Pages. I have used my Node.js knowledge to
-					create{" "}
-					<a href="/projects/quadraticbot2.0">QuadraticBot 2.0</a>, a
-					giveaway bot for discord.
-				</p>
-				<p>
-					For more projects, check out{" "}
-					<a
-						href="https://github.com/Henry-Hiles"
-						target="_blank"
-						rel="noreferrer"
-					>
-						my GitHub profile.
-					</a>
-				</p>
-			</article>
-			<section class={styles.images}>
-				<a
-					href="https://www.credly.com/badges/bd5a8213-4e3d-4b93-9b7d-4cbce07ef960/public_url"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img
-						src="/images/az-900.png"
-						alt="Azure Fundamentals Badge"
-					/>
-				</a>
-				<a
-					href="https://www.credly.com/badges/1fd0fc1c-052a-4311-9938-6d38057305ce/public_url"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img
-						src="/images/dp-900.png"
-						alt="Azure Data Fundamentals Badge"
-					/>
-				</a>
-				<a
-					href="https://www.credly.com/badges/37008ee1-69e0-44aa-82cb-33e4bdf153a8/public_url"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img
-						src="/images/ai-900.png"
-						alt="Azure AI Fundamentals Badge"
-					/>
-				</a>
-			</section>
-		</section>
-		<article>
 			<img
 				src={`https://raw.githubusercontent.com/Henry-Hiles/github-stats/master/generated/languages.svg${
 					false ? "#gh-light-mode-only" : "#gh-dark-mode-only"
 				}`}
 				alt="My Github Stats"
 			/>
-		</article>
-	</div>
+		</section>
+	</a>
+	<section class={`${styles.certifications} ${styles.row}`}>
+		<a
+			href="https://www.credly.com/badges/bd5a8213-4e3d-4b93-9b7d-4cbce07ef960/public_url"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img src="/images/az-900.png" alt="Azure Fundamentals Badge" />
+		</a>
+		<a
+			href="https://www.credly.com/badges/1fd0fc1c-052a-4311-9938-6d38057305ce/public_url"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img src="/images/dp-900.png" alt="Azure Data Fundamentals Badge" />
+		</a>
+		<a
+			href="https://www.credly.com/badges/37008ee1-69e0-44aa-82cb-33e4bdf153a8/public_url"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img src="/images/ai-900.png" alt="Azure AI Fundamentals Badge" />
+		</a>
+	</section>
 </section>
