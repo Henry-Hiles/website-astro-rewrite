@@ -6,6 +6,9 @@
 	font-weight: bold;
 	background: hsl(0 0% 0% / 0.4);
 	font-size: 1.5em;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
 .links svg {
