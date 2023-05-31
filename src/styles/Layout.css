@@ -4,7 +4,7 @@
 
 	--primary: hsl(211 26% 39%);
 	--secondary: hsl(209 28% 29%);
-	--secondary-hover: hsl(209 28% 19%);
+	--secondary-hover: hsl(209 28% 25%);
 	--text-primary: hsl(0 0% 100%);
 	--secondary-text: hsl(211 26% 39%);
 }
@@ -15,7 +15,6 @@ body {
 	margin: 0;
 	background-attachment: fixed;
 	background-image: url("/images/background.jpg");
-	backdrop-filter: blur(10px);
 	color: var(--text-primary);
 }
 
@@ -27,7 +26,6 @@ body {
 
 svg {
 	vertical-align: middle;
-	font-size: 0.75rem;
 }
 
 img {
@@ -36,20 +34,22 @@ img {
 
 main {
 	display: flex;
-	gap: 2rem;
+	gap: 5rem;
 	flex-direction: column;
 	align-items: center;
-	padding-bottom: 2em;
+	padding-bottom: 10em;
 }
 
 main > section {
-	scroll-margin-top: 8rem;
+	scroll-margin-top: 9rem;
 	display: flex;
 	flex-direction: column;
 	border-radius: 1rem;
 	background: rgba(0 0 0 / 0.3);
 	padding: 2rem;
+	margin: 1rem;
 	width: 90%;
+	min-height: 80vh;
 	transition: scale 0.2s;
 }
 

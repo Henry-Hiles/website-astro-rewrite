@@ -1,7 +1,7 @@
 .nav {
 	padding: 0.5rem;
 	display: flex;
-	font-size: 1.3em;
+	font-size: 1.3rem;
 	overflow-y: auto;
 	font-weight: bold;
 	background: hsl(0 0% 0% / 0.4);

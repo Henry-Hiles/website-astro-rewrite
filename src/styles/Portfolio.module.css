@@ -8,6 +8,11 @@
 
 .portfolioItems a {
 	color: var(--text-primary);
+	transition: scale 0.2s;
+}
+
+.portfolioItems a:not(:hover) {
+	filter: brightness(90%);
 }
 
 .portfolioItems a:not(:hover) {
@@ -35,6 +40,10 @@
 	position: absolute;
 	text-align: center;
 	width: 100%;
+}
+
+.portfolioItems a:hover {
+	scale: 1.1;
 }
 
 .projectName {

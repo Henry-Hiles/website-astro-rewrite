@@ -11,7 +11,7 @@
 		},
 		"technologies": "This project was built using Node.js and Discord.js.",
 		"mainImage": "quadraticBotComputer.png",
-		"thumbImage": "quadraticBot.png"
+		"thumbImage": "mentalMathThumb.svg"
 	},
 	{
 		"name": "PokeAPI Searcher",
@@ -21,7 +21,7 @@
 		"description": "A simple website where you can search for Pokemon by type or Pokedex. Uses the PokeAPI for data. Made purely of HTML, CSS, and Vanilla Javascript. Uses the Fetch API for querying the PokeAPI.",
 		"technologies": "This project was built using handcrafted HTML, CSS, and JavaScript. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
 		"mainImage": "pokeAPIComputer.png",
-		"thumbImage": "pokeAPIThumb.png"
+		"thumbImage": "mentalMathThumb.svg"
 	},
 	{
 		"name": "Messaging",
@@ -42,7 +42,7 @@
 		"description": "A simple Web-RTC powered video chat, great for chatting with friends or family.",
 		"technologies": "This project was built using EJS, PeerJS, Express, and Socket.IO.",
 		"mainImage": "videoChatComputer.png",
-		"thumbImage": "videoChatThumb.png",
+		"thumbImage": "mentalMathThumb.svg",
 		"demoLink": "https://video.henryhiles.com"
 	},
 	{
@@ -63,7 +63,7 @@
 		"description": "An open-source website to find movies, written in React. Includes a client-side only rating system. Uses the TMDB API for data.",
 		"technologies": "This project was built using React and CSS Modules.",
 		"mainImage": "movieComputer.png",
-		"thumbImage": "movieThumb.svg",
+		"thumbImage": "mentalMathThumb.svg",
 		"demoLink": "https://movies.henryhiles.com"
 	},
 	{
