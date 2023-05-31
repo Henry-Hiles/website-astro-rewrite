@@ -33,3 +33,26 @@ svg {
 img {
 	max-width: 100%;
 }
+
+main {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 2em;
+}
+
+main > section {
+	scroll-margin-top: 8rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1rem;
+	background: rgba(0 0 0 / 0.3);
+	padding: 2rem;
+	width: 90%;
+	transition: scale 0.2s;
+}
+
+main > section:hover {
+	scale: 1.03;
+}
