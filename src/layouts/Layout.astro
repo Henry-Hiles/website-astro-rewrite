@@ -1,5 +1,6 @@
 ---
 import "../styles/Layout.css"
+import Top from "../components/Top.astro"
 import Nav from "../components/Nav.astro"
 
 export interface Props {
@@ -47,5 +48,6 @@ const { page } = Astro.props
 	<body>
 		<Nav />
 		<slot />
+		<Top />
 	</body>
 </html>
