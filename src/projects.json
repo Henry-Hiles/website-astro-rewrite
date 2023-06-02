@@ -11,7 +11,7 @@
 		},
 		"technologies": "This project was built using Node.js and Discord.js.",
 		"mainImage": "quadraticBotComputer.png",
-		"thumbImage": "mentalMathThumb.svg"
+		"thumbImage": "quadraticBotThumb.svg"
 	},
 	{
 		"name": "PokeAPI Searcher",
@@ -42,7 +42,7 @@
 		"description": "A simple Web-RTC powered video chat, great for chatting with friends or family.",
 		"technologies": "This project was built using EJS, PeerJS, Express, and Socket.IO.",
 		"mainImage": "videoChatComputer.png",
-		"thumbImage": "mentalMathThumb.svg",
+		"thumbImage": "videoChatThumb.svg",
 		"demoLink": "https://video.henryhiles.com"
 	},
 	{
@@ -63,7 +63,7 @@
 		"description": "An open-source website to find movies, written in React. Includes a client-side only rating system. Uses the TMDB API for data.",
 		"technologies": "This project was built using React and CSS Modules.",
 		"mainImage": "movieComputer.png",
-		"thumbImage": "mentalMathThumb.svg",
+		"thumbImage": "movieReactThumb.svg",
 		"demoLink": "https://movies.henryhiles.com"
 	},
 	{
