@@ -6,11 +6,13 @@ import Layout from "../../layouts/Layout.astro"
 import projects from "../../projects.json"
 
 export function getStaticPaths() {
-	return projects.map((project) => ({ params: { route: project.route } }))
+	return projects.map((project) => ({
+		params: { route: project.route }
+	}))
 }
 
-const { route } = Astro.params
-const project = projects.find((project) => project.route === route)
+const { route: projectRoute } = Astro.params
+const project = projects.find((project) => project.route === projectRoute)
 if (project == null) return
 ---
 
