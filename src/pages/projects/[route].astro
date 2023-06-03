@@ -16,7 +16,7 @@ const project = projects.find((project) => project.route === projectRoute)
 if (project == null) return
 ---
 
-<Layout page={project.name}>
+<Layout page={project.name} description={project.description}>
 	<main>
 		<section id={styles.jumbo}>
 			<h1 class={styles.title}>{project.name}</h1>

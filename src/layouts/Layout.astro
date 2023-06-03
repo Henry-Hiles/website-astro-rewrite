@@ -5,9 +5,11 @@ import Nav from "../components/Nav.astro"
 
 export interface Props {
 	page: string
+	title?: string
+	description: string
 }
 
-const { page } = Astro.props
+const { page, title = page, description } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -35,12 +37,8 @@ const { page } = Astro.props
 		/>
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
-		<meta content="Henry Hiles" property="og:title" />
-		<meta
-			content="The website of full stack .NET developer & Discord bot developer Henry Hiles."
-			property="og:description"
-		/>
-		<meta content="https://henryhiles.com" property="og:url" />
+		<meta content={title} property="og:title" />
+		<meta content={description} property="og:description" />
 		<meta content="/images/favicon.ico" property="og:image" />
 		<meta content="#14bc9d" data-react-helmet="true" name="theme-color" />
 		<title>Henry Hiles - {page}</title>
