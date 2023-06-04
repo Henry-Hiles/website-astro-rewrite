@@ -1,3 +1,10 @@
+.longDescription {
+	font-size: 1.5rem;
+	text-align: justify;
+	padding: 1em;
+	max-width: 40rem;
+}
+
 .overview {
 	width: 100%;
 	padding: 20px;
@@ -11,13 +18,6 @@
 
 #jumbo {
 	padding: 3em 0 0;
-}
-
-.longDescription {
-	font-size: 1.5rem;
-	text-align: justify;
-	padding: 1em;
-	max-width: 700px;
 }
 
 .image img {
