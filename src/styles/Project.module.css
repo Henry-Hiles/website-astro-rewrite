@@ -5,6 +5,10 @@
 	max-width: 40rem;
 }
 
+#thumb {
+	height: 10rem;
+}
+
 .overview {
 	width: 100%;
 	padding: 20px;

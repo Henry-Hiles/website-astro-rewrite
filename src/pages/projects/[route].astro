@@ -18,7 +18,14 @@ if (project == null) return
 
 <Layout page={project.name} description={project.description}>
 	<section id={styles.jumbo}>
-		<h1 class={styles.title}>{project.name}</h1>
+		<img
+			id={styles.thumb}
+			src={`/images/${project.thumbImage}`}
+			alt={project.name}
+		/>
+		<h1 class={styles.title}>
+			{project.name}
+		</h1>
 		<Divider />
 		<p class={styles.overview}>{project.overview}</p>
 	</section>
