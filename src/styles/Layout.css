@@ -34,23 +34,29 @@ img {
 
 main {
 	display: flex;
-	gap: 2rem;
+	gap: 3rem;
 	flex-direction: column;
 	align-items: center;
 	padding-bottom: 10em;
 }
 
 main > section {
-	scroll-margin-top: 9rem;
 	display: flex;
 	flex-direction: column;
 	border-radius: 1rem;
 	background: rgb(0 0 0 / 0.3);
 	padding: 2rem;
 	width: 90%;
+	scroll-margin: 1rem;
 	transition: scale 0.2s;
 }
 
 main > section:hover {
 	scale: 1.03;
+}
+
+@media (min-width: 500px) {
+	main > section {
+		scroll-margin: 6rem;
+	}
 }

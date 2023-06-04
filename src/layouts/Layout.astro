@@ -44,8 +44,10 @@ const { page, title = page, description } = Astro.props
 		<title>Henry Hiles - {page}</title>
 	</head>
 	<body>
-		<Nav />
-		<slot />
-		<Top />
+		<main>
+			<Nav />
+			<slot />
+			<Top />
+		</main>
 	</body>
 </html>

@@ -17,56 +17,51 @@ if (project == null) return
 ---
 
 <Layout page={project.name} description={project.description}>
-	<main>
-		<section id={styles.jumbo}>
-			<h1 class={styles.title}>{project.name}</h1>
+	<section id={styles.jumbo}>
+		<h1 class={styles.title}>{project.name}</h1>
+		<Divider />
+		<p class={styles.overview}>{project.overview}</p>
+	</section>
+	<section id={styles.details} class={styles.row}>
+		<article class={styles.longDescription}>
+			<h2>Description</h2>
 			<Divider />
-			<p class={styles.overview}>{project.overview}</p>
-		</section>
-		<section id={styles.details} class={styles.row}>
-			<article class={styles.longDescription}>
-				<h2>Description</h2>
-				<Divider />
-				<section>
-					<p>
-						{project.description}
-						{project.technologies}
-					</p>
-					<div class={styles.buttonRow}>
-						{
-							project.github && (
-								<ButtonLink href={project.github} newTab>
-									Source Code
-								</ButtonLink>
-							)
-						}
-						{
-							project.demoLink && (
-								<ButtonLink href={project.demoLink} newTab>
-									Go to demo
-								</ButtonLink>
-							)
-						}
-						{
-							project.customLink && (
-								<ButtonLink
-									href={project.customLink.link}
-									newTab
-								>
-									{project.customLink.name}
-								</ButtonLink>
-							)
-						}
-					</div>
-				</section>
-			</article>
-			<article class={styles.image}>
-				<img
-					src={`/images/${project.mainImage}`}
-					alt={`Image of ${project.name}`}
-					class={styles.screenshot}
-				/>
-			</article>
-		</section>
-	</main>
+			<section>
+				<p>
+					{project.description}
+					{project.technologies}
+				</p>
+				<div class={styles.buttonRow}>
+					{
+						project.github && (
+							<ButtonLink href={project.github} newTab>
+								Source Code
+							</ButtonLink>
+						)
+					}
+					{
+						project.demoLink && (
+							<ButtonLink href={project.demoLink} newTab>
+								Go to demo
+							</ButtonLink>
+						)
+					}
+					{
+						project.customLink && (
+							<ButtonLink href={project.customLink.link} newTab>
+								{project.customLink.name}
+							</ButtonLink>
+						)
+					}
+				</div>
+			</section>
+		</article>
+		<article class={styles.image}>
+			<img
+				src={`/images/${project.mainImage}`}
+				alt={`Image of ${project.name}`}
+				class={styles.screenshot}
+			/>
+		</article>
+	</section>
 </Layout>

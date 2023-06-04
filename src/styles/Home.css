@@ -1,10 +1,10 @@
+main > section {
+	min-height: 80vh;
+}
+
 main > section > :is(h1, h2) {
 	font-size: 2.5rem;
 	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
-}
-
-main > section {
-	min-height: 80vh;
 }
