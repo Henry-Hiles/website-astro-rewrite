@@ -1,6 +1,7 @@
 {
 	"name": "Henry Hiles",
-	"short_name": "HH",
+	"description": "Full Stack Web Developer and Discord Bot Developer",
+	"short_name": "Henry Hiles",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",
@@ -13,7 +14,6 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#ffffff",
-	"background_color": "#ffffff",
-	"display": "standalone"
+	"start_url": "https://henryhiles.com",
+	"display": "browser"
 }
