@@ -27,7 +27,8 @@
 .image img {
 	max-height: 450px;
 	padding: 0;
-	border: 2px solid var(--secondary);
+	border-radius: 0.5rem;
+	border: 3px solid var(--primary);
 }
 
 .longDescription h2 {

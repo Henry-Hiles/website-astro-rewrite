@@ -12,12 +12,11 @@
 .dividerIcon svg {
 	height: 2rem;
 	width: 2rem;
-	color: inherit;
 }
 
 .dividerIcon::before,
 .dividerIcon::after {
-	border-bottom: 0.5rem solid var(--text-primary);
+	border-bottom: 0.5rem solid;
 	border-radius: 5em;
 	content: "";
 	margin: 0 1em;

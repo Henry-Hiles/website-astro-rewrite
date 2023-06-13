@@ -13,7 +13,7 @@
 }
 
 #notFound a {
-	color: var(--text-primary);
+	color: white;
 }
 
 #header {

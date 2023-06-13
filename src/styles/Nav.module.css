@@ -29,7 +29,7 @@
 }
 
 .nav button:hover {
-	color: var(--secondary-text);
+	color: var(--primary-text);
 }
 
 .nav a {
@@ -41,7 +41,7 @@
 }
 
 .nav a:hover {
-	color: var(--secondary-text);
+	color: var(--primary-text);
 }
 
 @media (min-width: 500px) {

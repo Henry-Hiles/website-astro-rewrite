@@ -8,7 +8,7 @@
 }
 
 .portfolioItems a {
-	color: var(--text-primary);
+	color: white;
 	transition: scale 0.2s;
 }
 

@@ -2,11 +2,8 @@
 	color-scheme: dark light;
 	scroll-behavior: smooth;
 
-	--primary: hsl(211 26% 39%);
-	--secondary: hsl(209 28% 29%);
-	--secondary-hover: hsl(209 28% 25%);
-	--text-primary: hsl(0 0% 100%);
-	--secondary-text: hsl(211 26% 39%);
+	--primary: #4e94e4;
+	--secondary: #354b5f;
 }
 
 body {
@@ -15,7 +12,7 @@ body {
 	margin: 0;
 	background-attachment: fixed;
 	background-image: url("/images/background.jpg");
-	color: var(--text-primary);
+	color: white;
 }
 
 *,
@@ -63,7 +60,7 @@ main > section:hover {
 }
 
 a {
-	color: #4f94e5;
+	color: var(--primary);
 }
 
 a:not(:hover) {
