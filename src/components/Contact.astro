@@ -1,0 +1,28 @@
+---
+import buttonStyles from "../styles/Button.module.css"
+
+export interface Props {
+	subject?: string
+}
+
+const { subject = "Contact Me" } = Astro.props
+---
+
+<button id="contact" class={buttonStyles.button} data-subject={subject}
+	>Contact Me</button
+>
+
+<script>
+	const contact = document.querySelector("#contact")
+
+	contact?.addEventListener(
+		"click",
+		() =>
+			window.open(
+				`${"mai"}${"lto:cont"}${"act@henr"}yhile${"s.com?subj"}ect=${
+					(contact as HTMLElement).dataset.subject
+				}`,
+				"_self"
+			) // Use string concatination to hopefully avoid spam
+	)
+</script>

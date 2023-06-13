@@ -1,0 +1,24 @@
+---
+import styles from "../styles/Hire.module.css"
+import Contact from "./Contact.astro"
+import Divider from "./Divider.astro"
+---
+
+<section id="hire" class={styles.hire}>
+	<h2>Hire Me</h2>
+	<Divider />
+	<p class={styles.jobDescription}>
+		I can create custom experiences for you, from a Discord server to a
+		whole website, at reasonable prices. You can trust my years of
+		JavaScript, HTML, and CSS experience. I am also skilled with Astro,
+		useful for making static sites.
+	</p>
+	<ul class={styles.jobs}>
+		<li>
+			<a href="/discord-bot-developer">Custom Discord Bots - From $30</a>
+		</li>
+		<li>Personalized Discord Server - From $20</li>
+		<li>Bespoke Website - From $50</li>
+	</ul>
+	<Contact />
+</section>

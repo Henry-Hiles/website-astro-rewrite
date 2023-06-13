@@ -37,8 +37,8 @@ main {
 	display: flex;
 	gap: 3rem;
 	flex-direction: column;
+	padding-bottom: 2rem;
 	align-items: center;
-	padding-bottom: 10em;
 }
 
 main > section {
@@ -60,4 +60,12 @@ main > section:hover {
 	main > section {
 		scroll-margin: 6rem;
 	}
+}
+
+a {
+	color: #4f94e5;
+}
+
+a:not(:hover) {
+	text-decoration: none;
 }

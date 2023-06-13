@@ -1,0 +1,28 @@
+---
+import styles from "../styles/Bot.module.css"
+import Divider from "../components/Divider.astro"
+import Layout from "../layouts/Layout.astro"
+import Contact from "../components/Contact.astro"
+---
+
+<Layout
+	page="Discord Bot Developer"
+	description="Hire me to make you a Discord Bot"
+>
+	<section class={styles.discord}>
+		<h1 class={styles.title}>Discord Bots</h1>
+		<Divider />
+		<p class={styles.description}>
+			I can create a Discord bot for you that fits your needs, starting
+			from the low price of $30. You can count on my years of Node.JS
+			experience. For an example of my quality code, you can check the
+			source code of my bot <a
+				target="_blank"
+				rel="noreferrer"
+				href="https://github.com/QuadraticBot/QuadraticBot2.0"
+				>QuadraticBot2.0</a
+			>.
+		</p>
+		<Contact subject="Contact Me - Discord Bot" />
+	</section>
+</Layout>
