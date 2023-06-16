@@ -4,8 +4,8 @@ import Layout from "../layouts/Layout.astro"
 import Divider from "../components/Divider.astro"
 ---
 
-<Layout page="Not Found">
-	<div id={styles.notFound}>
+<Layout page="Not Found" description="We couldn't find this page.">
+	<section id={styles.notFound}>
 		<h1 id={styles.header}>Page Not Found</h1>
 		<Divider />
 		<span id={styles.description}>
@@ -13,5 +13,5 @@ import Divider from "../components/Divider.astro"
 				>home page</a
 			>.
 		</span>
-	</div>
+	</section>
 </Layout>
