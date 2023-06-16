@@ -1,7 +1,9 @@
 ---
-import projects from "../projects.json"
+import { getCollection } from "astro:content"
 import styles from "../styles/Portfolio.module.css"
 import Divider from "./Divider.astro"
+
+const projects = await getCollection("projects")
 ---
 
 <section id="portfolio" class={styles.portfolio}>
@@ -10,12 +12,12 @@ import Divider from "./Divider.astro"
 	<article class={styles.portfolioItems}>
 		{
 			projects.map((project) => (
-				<a href={`/projects/${project.route}`}>
+				<a href={`/projects/${project.slug}`}>
 					<img
-						src={`/images/${project.thumbImage}`}
-						alt={project.name}
+						src={`/images/${project.data.thumbImage}`}
+						alt={project.data.name}
 					/>
-					<h3 class={styles.projectName}>{project.name}</h3>
+					<h3 class={styles.projectName}>{project.data.name}</h3>
 				</a>
 			))
 		}

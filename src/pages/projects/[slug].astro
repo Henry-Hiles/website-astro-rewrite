@@ -3,20 +3,22 @@ import ButtonLink from "../../components/ButtonLink.astro"
 import Divider from "../../components/Divider.astro"
 import styles from "../../styles/Project.module.css"
 import Layout from "../../layouts/Layout.astro"
-import projects from "../../projects.json"
+import { getCollection } from "astro:content"
+export const getStaticPaths = async () => {
+	const blogEntries = await getCollection("projects")
 
-export function getStaticPaths() {
-	return projects.map((project) => ({
-		params: { route: project.route }
+	return blogEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry }
 	}))
 }
 
-const { route: projectRoute } = Astro.params
-const project = projects.find((project) => project.route === projectRoute)
-if (project == null) return
+const { entry } = Astro.props
+const { Content } = await entry.render()
+const { data: project } = entry
 ---
 
-<Layout page={project.name} description={project.description}>
+<Layout page={project.name} description={project.overview}>
 	<section id={styles.jumbo}>
 		<img
 			id={styles.thumb}
@@ -35,8 +37,7 @@ if (project == null) return
 			<Divider />
 			<section>
 				<p>
-					{project.description}
-					{project.technologies}
+					<Content />
 				</p>
 				<div class={styles.buttonRow}>
 					{
