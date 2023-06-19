@@ -1,0 +1,28 @@
+---
+import styles from "../styles/BlogPost.module.css"
+import Divider from "../components/Divider.astro"
+
+import type { CollectionEntry } from "astro:content"
+interface Props {
+	post: CollectionEntry<"blog">
+}
+
+const { data: post, render } = Astro.props.post
+const { Content } = await render()
+const pubDate = new Intl.DateTimeFormat("en-US", {
+	month: "long",
+	day: "numeric",
+	year: "numeric"
+}).format(post.pubDate)
+---
+
+<section class={styles.jumbo}>
+	<span class={styles.date}>{pubDate}</span>
+	<h2 class={styles.title}>
+		{post.title}
+	</h2>
+	<Divider />
+	<article class={styles.description}>
+		<Content />
+	</article>
+</section>

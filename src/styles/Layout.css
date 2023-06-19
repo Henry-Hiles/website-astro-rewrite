@@ -31,26 +31,28 @@ img {
 }
 
 main {
+	--gap: min(8vw, 4rem);
 	display: flex;
-	gap: 3rem;
+	gap: var(--gap);
+	padding: var(--gap);
+	width: 100%;
 	flex-direction: column;
-	padding-bottom: 2rem;
 	align-items: center;
 }
 
-main > section {
+:is(article, section, aside):not(section *, nav *, header *) {
 	display: flex;
 	flex-direction: column;
 	border-radius: 1rem;
 	background: rgb(0 0 0 / 0.3);
 	padding: 2rem;
-	width: 90%;
+	width: 100%;
 	scroll-margin: 1rem;
 	transition: scale 0.2s;
 }
 
-main > section:hover {
-	scale: 1.03;
+:is(article, section, aside):not(section *, nav *, header *):hover {
+	scale: 102%;
 }
 
 @media (min-width: 500px) {
@@ -65,4 +67,18 @@ a {
 
 a:not(:hover) {
 	text-decoration: none;
+}
+
+input[type="text"] {
+	display: flex;
+	background: rgb(0 0 0 / 0.1);
+	border: 2px solid var(--primary);
+	backdrop-filter: blur(2rem);
+	border-radius: 1rem;
+	padding: 1rem;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 1.5rem;
+	color: white;
+	justify-content: center;
 }

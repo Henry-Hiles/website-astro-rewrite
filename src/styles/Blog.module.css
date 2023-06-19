@@ -1,0 +1,52 @@
+.link {
+	display: flex;
+	width: 100%;
+	color: unset;
+	text-decoration: none;
+	justify-content: center;
+}
+
+.description {
+	border: 2px solid var(--primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.description h1 {
+	font-size: 2.8rem;
+	margin: 1rem;
+}
+
+.description p {
+	font-size: 1.5rem;
+	text-align: justify;
+	max-width: 40rem;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	gap: inherit;
+}
+
+.sidebar {
+	display: flex;
+	position: sticky;
+	top: 8rem;
+	height: 80vh;
+	flex-direction: column;
+	width: 20rem;
+}
+
+.container {
+	display: flex;
+	gap: 2rem;
+	width: 100%;
+}
+
+[aria-hidden="true"] {
+	display: none;
+}

@@ -1,0 +1,44 @@
+.jumbo {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+}
+
+.date {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	color: hsl(37 10% 58%);
+}
+
+.title {
+	font-size: 2.8em;
+	margin: 0.2em;
+	text-align: center;
+}
+
+.description p {
+	font-size: 1.3rem;
+	max-width: 40rem;
+	text-align: justify;
+}
+
+.description :is(h1, h2, h3) {
+	text-align: center;
+	margin: 1rem;
+}
+
+.description h1 {
+	font-size: 2.2rem;
+}
+
+.description h2 {
+	font-size: 1.6rem;
+}
+
+.description :is(strong, em) {
+	display: block;
+	width: 100%;
+	text-align: justify;
+}

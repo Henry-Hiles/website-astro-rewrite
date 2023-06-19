@@ -5,11 +5,10 @@ import Nav from "../components/Nav.astro"
 
 export interface Props {
 	page: string
-	title?: string
 	description: string
 }
 
-const { page, title = page, description } = Astro.props
+const { page, description } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -27,27 +26,27 @@ const { page, title = page, description } = Astro.props
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="/images/favicon-32x32.png"
+			href="/favicon-32x32.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/images/favicon-16x16.png"
+			href="/favicon-16x16.png"
 		/>
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
-		<meta content={title} property="og:title" />
+		<meta content={`Henry Hiles - ${page}`} property="og:title" />
 		<meta content={description} property="og:description" />
-		<meta content="/images/favicon.ico" property="og:image" />
+		<meta content="/favicon.ico" property="og:image" />
 		<meta content="#14bc9d" data-react-helmet="true" name="theme-color" />
 		<title>Henry Hiles - {page}</title>
 	</head>
 	<body>
+		<Nav />
 		<main>
-			<Nav />
 			<slot />
-			<Top />
 		</main>
+		<Top />
 	</body>
 </html>
