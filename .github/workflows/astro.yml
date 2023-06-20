@@ -53,7 +53,7 @@ jobs:
         
       - name: Build with Astro
         run: |
-          pnpx astro build
+          pnpm astro build
         working-directory: ${{ env.BUILD_PATH }}
         
       - name: Install SSH key
