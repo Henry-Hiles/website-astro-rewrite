@@ -3,24 +3,26 @@ import { rssSchema } from "@astrojs/rss"
 
 const blogCollection = defineCollection({
 	type: "content",
-	schema: rssSchema
+	schema: rssSchema.extend({
+		category: z.enum(["web", "bot", "linux", "other"])
+	})
 })
 
 const projectsCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		name: z.string(),
-		github: z.string().optional(),
+		github: z.string().url().optional(),
 		overview: z.string(),
 		customLink: z
 			.object({
 				name: z.string(),
-				url: z.string()
+				url: z.string().url()
 			})
 			.optional(),
 		mainImage: z.string(),
 		thumbImage: z.string(),
-		demoLink: z.string().optional()
+		demoLink: z.string().url().optional()
 	})
 })
 

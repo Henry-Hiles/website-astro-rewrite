@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss"
 import { getCollection } from "astro:content"
-import { marked } from "marked"
+import { micromark } from "micromark"
 
 export const get = async (context) => {
 	const blog = await getCollection("blog")
@@ -11,10 +11,7 @@ export const get = async (context) => {
 		site: context.site,
 		items: blog.map((post) => ({
 			link: `/blog/${post.slug}/`,
-			content: marked.parse(post.body, {
-				mangle: false,
-				headerIds: false
-			}),
+			content: micromark(post.body),
 			...post.data
 		})),
 		customData: "<language>en-us</language>",

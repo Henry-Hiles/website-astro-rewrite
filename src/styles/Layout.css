@@ -2,8 +2,9 @@
 	color-scheme: dark light;
 	scroll-behavior: smooth;
 
-	--primary: #4e94e4;
-	--secondary: #354b5f;
+	--primary: hsl(212, 74%, 60%);
+	--secondary: hsl(209, 28%, 29%);
+	--muted: hsl(0, 0%, 54%);
 }
 
 body {
@@ -40,7 +41,7 @@ main {
 	align-items: center;
 }
 
-:is(article, section, aside):not(section *, nav *, header *) {
+:is(article, section, aside):not(section *, nav *, header *, aside *) {
 	display: flex;
 	flex-direction: column;
 	border-radius: 1rem;
@@ -52,7 +53,7 @@ main {
 }
 
 :is(article, section, aside):not(section *, nav *, header *):hover {
-	scale: 102%;
+	scale: 101.5%;
 }
 
 @media (min-width: 500px) {

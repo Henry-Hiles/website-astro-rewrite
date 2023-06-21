@@ -12,6 +12,23 @@ const posts = await getCollection("blog")
 	<div class={styles.container}>
 		<aside class={styles.sidebar}>
 			<input type="text" placeholder="Search..." id="search" />
+
+			<section class={styles.radios}>
+				<input type="radio" name="category" id="all" checked />
+				<label for="all">All</label>
+
+				<input type="radio" name="category" id="linux" />
+				<label for="linux">Linux</label>
+
+				<input type="radio" name="category" id="web" />
+				<label for="web">Web Development</label>
+
+				<input type="radio" name="category" id="bot" />
+				<label for="bot">Discord Bot Development</label>
+
+				<input type="radio" name="category" id="other" />
+				<label for="other">Other</label>
+			</section>
 		</aside>
 		<div class={styles.right}>
 			<article class={styles.description}>
@@ -29,9 +46,9 @@ const posts = await getCollection("blog")
 						class={styles.link}
 						href={`/blog/${post.slug}`}
 						data-title={post.data.title}
-						data-tags=""
+						data-category={post.data.category}
 					>
-						<BlogPost post={post} />
+						<BlogPost post={post} standalone={false} />
 					</a>
 				))
 			}
@@ -40,23 +57,63 @@ const posts = await getCollection("blog")
 </Layout>
 
 <script>
+	let category = "all"
 	const searchBar = document.querySelector("#search") as HTMLInputElement
 	const posts = document.querySelectorAll(
 		"[data-title]"
 	) as NodeListOf<HTMLElement>
+	const radios = document.querySelectorAll('input[type="radio"]')
+	const urlParams = new URLSearchParams(location.search)
+	const set = (name: string, value: string) => {
+		urlParams.set(name, value)
+		history.replaceState({}, "", `?${urlParams}`)
+	}
+
+	radios.forEach((radio) =>
+		radio.addEventListener("click", ({ target }) => {
+			if (target instanceof HTMLInputElement) {
+				set("category", target.id)
+				category = target.id
+				filterByCategory()
+			}
+		})
+	)
 
 	const search = () =>
-		posts.forEach((post) =>
-			post.setAttribute(
-				"aria-hidden",
-				post.dataset.title
+		filter(
+			(post) =>
+				!!post.dataset.title
 					?.toLowerCase()
 					?.includes(searchBar.value.toLowerCase())
-					? "false"
-					: "true"
-			)
 		)
 
-	searchBar?.addEventListener("input", search)
-	addEventListener("load", search)
+	const filterByCategory = () =>
+		filter((post) =>
+			category == "all" ? true : post.dataset.category == category
+		)
+
+	const filter = (condition: (element: HTMLElement) => boolean) =>
+		posts.forEach((post) =>
+			post.setAttribute("aria-hidden", (!condition(post)).toString())
+		)
+
+	searchBar?.addEventListener("input", () => {
+		set("search", searchBar.value)
+		search()
+	})
+
+	addEventListener("load", () => {
+		searchBar.value = urlParams.get("search") ?? ""
+		Array.from(radios).find((radio) => {
+			if (
+				radio instanceof HTMLInputElement &&
+				radio.id == urlParams.get("category")
+			) {
+				radio.checked = true
+				category = radio.id
+			}
+		})
+		search()
+		filterByCategory()
+	})
 </script>

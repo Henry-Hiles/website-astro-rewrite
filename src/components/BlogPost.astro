@@ -2,27 +2,56 @@
 import styles from "../styles/BlogPost.module.css"
 import Divider from "../components/Divider.astro"
 
-import type { CollectionEntry } from "astro:content"
+import { CollectionEntry, getCollection } from "astro:content"
 interface Props {
 	post: CollectionEntry<"blog">
+	standalone?: Boolean
 }
 
-const { data: post, render } = Astro.props.post
+const { post: postEntry, standalone = true } = Astro.props
+const { data: post, render } = postEntry
 const { Content } = await render()
 const pubDate = new Intl.DateTimeFormat("en-US", {
 	month: "long",
 	day: "numeric",
 	year: "numeric"
 }).format(post.pubDate)
+const blog = await getCollection("blog")
+const index = blog.findIndex((blogPost) => blogPost.id === postEntry.id)
+const prev = blog[index - 1]
+const next = blog[index + 1]
 ---
 
-<section class={styles.jumbo}>
-	<span class={styles.date}>{pubDate}</span>
+<section class={`${styles.jumbo} ${standalone ? styles.standalone : ""}`}>
+	<section class={styles.top}>
+		{standalone && <a href="/blog">&lt; Go Back</a>}
+		<span class={styles.date}>{pubDate}</span>
+	</section>
 	<h2 class={styles.title}>
 		{post.title}
 	</h2>
 	<Divider />
 	<article class={styles.description}>
-		<Content />
+		{standalone ? <Content /> : post.description}
 	</article>
+	{standalone ? "" : <span class={styles.more}>Read More</span>}
+	{
+		standalone ? (
+			<section class={styles.links}>
+				{prev ? (
+					<a href={`/blog/${prev.slug}`}>&lt; {prev.data.title}</a>
+				) : (
+					<span>&lt; Previous Article</span>
+				)}
+
+				{next ? (
+					<a href={`/blog/${next.slug}`}>{next.data.title} &gt;</a>
+				) : (
+					<span>Next Article &gt;</span>
+				)}
+			</section>
+		) : (
+			""
+		)
+	}
 </section>

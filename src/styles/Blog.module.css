@@ -1,9 +1,7 @@
 .link {
-	display: flex;
+	text-decoration: none;
 	width: 100%;
 	color: unset;
-	text-decoration: none;
-	justify-content: center;
 }
 
 .description {
@@ -35,6 +33,7 @@
 .sidebar {
 	display: flex;
 	position: sticky;
+	gap: 1rem;
 	top: 8rem;
 	height: 80vh;
 	flex-direction: column;
@@ -47,6 +46,21 @@
 	width: 100%;
 }
 
-[aria-hidden="true"] {
+[aria-hidden="true"],
+.radios [type="radio"] {
 	display: none;
+}
+
+.radios :checked + label {
+	color: var(--primary);
+	font-weight: bold;
+}
+
+label {
+	font-size: 1.3rem;
+}
+
+.radios {
+	display: flex;
+	flex-direction: column;
 }
