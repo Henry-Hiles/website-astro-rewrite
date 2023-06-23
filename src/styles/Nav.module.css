@@ -1,5 +1,6 @@
 .nav {
 	display: flex;
+	gap: 1rem;
 	width: 100%;
 	align-items: center;
 	justify-content: space-between;
@@ -18,7 +19,7 @@
 }
 
 .nav :is(svg, img) {
-	height: 2rem;
+	width: 2rem;
 }
 
 .nav button {

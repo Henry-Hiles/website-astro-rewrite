@@ -1,0 +1,104 @@
+---
+import Layout from "../../../layouts/Layout.astro"
+import BlogPost from "../../../components/BlogPost.astro"
+import styles from "../../../styles/Blog.module.css"
+import { getCollection } from "astro:content"
+import categories from "../../../categories"
+import Divider from "../../../components/Divider.astro"
+
+export const getStaticPaths = async () => {
+	const posts = await getCollection("blog")
+
+	return categories.map(([category, properties]) => ({
+		params: { category: properties.default ? undefined : category },
+		props: {
+			filteredPosts: properties.default
+				? posts
+				: posts.filter((post) => post.data.category == category)
+		}
+	}))
+}
+
+const { category } = Astro.params
+const { filteredPosts } = Astro.props
+---
+
+<Layout page="Blog" description="The blog of Henry Hiles">
+	<div class={styles.container}>
+		<aside class={styles.sidebar}>
+			<input type="text" placeholder="Search..." id="search" />
+
+			<section class={styles.categories}>
+				{
+					categories.map(([id, properties]) => (
+						<a
+							class={`${styles.category} ${
+								(properties.default && category == undefined) ||
+								id == category
+									? styles.selected
+									: ""
+							}`}
+							href={`/blog/${properties.default ? "" : id}`}
+						>
+							{properties.title}
+						</a>
+					))
+				}
+			</section>
+		</aside>
+		<div class={styles.right}>
+			<article class={styles.description}>
+				<h1>Welcome to the blog!</h1>
+				<Divider />
+				<p>
+					Hello, and welcome to my blog. I post about Discord Bot
+					Development, Web Development, Linux, and other Tech-related
+					subjects. You can filter and search in the sidebar.
+				</p>
+			</article>
+			{
+				filteredPosts.map((post) => (
+					<a
+						class={styles.link}
+						href={`/blog/${post.slug}`}
+						data-title={post.data.title}
+						data-category={post.data.category}
+					>
+						<BlogPost post={post} standalone={false} />
+					</a>
+				))
+			}
+		</div>
+	</div>
+</Layout>
+
+<script>
+	const searchBar = document.querySelector("#search") as HTMLInputElement
+	const posts = document.querySelectorAll(
+		"[data-title]"
+	) as NodeListOf<HTMLElement>
+	const urlParams = new URLSearchParams(location.search)
+
+	const search = () =>
+		posts.forEach((post) =>
+			post.setAttribute(
+				"aria-hidden",
+				(
+					post.dataset.title
+						?.toLowerCase()
+						?.includes(searchBar.value.toLowerCase()) ?? false
+				).toString()
+			)
+		)
+
+	searchBar?.addEventListener("input", () => {
+		urlParams.set("search", searchBar.value)
+		history.replaceState({}, "", `?${urlParams}`)
+		search()
+	})
+
+	addEventListener("load", () => {
+		searchBar.value = urlParams.get("search") ?? ""
+		search()
+	})
+</script>

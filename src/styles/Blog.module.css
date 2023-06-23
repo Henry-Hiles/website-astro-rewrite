@@ -46,21 +46,19 @@
 	width: 100%;
 }
 
-[aria-hidden="true"],
-.radios [type="radio"] {
-	display: none;
-}
-
-.radios :checked + label {
+.category.selected {
 	color: var(--primary);
 	font-weight: bold;
 }
 
-label {
+.category {
+	text-decoration: none;
+	color: white;
 	font-size: 1.3rem;
 }
 
-.radios {
+.categories {
 	display: flex;
+	gap: 0.1rem;
 	flex-direction: column;
 }

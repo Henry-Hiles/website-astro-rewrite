@@ -52,7 +52,7 @@ main {
 	transition: scale 0.2s;
 }
 
-:is(article, section, aside):not(section *, nav *, header *):hover {
+:is(article, section, aside):not(section *, nav *, header *, aside *):hover {
 	scale: 101.5%;
 }
 
