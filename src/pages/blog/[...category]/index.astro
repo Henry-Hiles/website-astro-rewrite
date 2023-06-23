@@ -2,9 +2,11 @@
 import Layout from "../../../layouts/Layout.astro"
 import BlogPost from "../../../components/BlogPost.astro"
 import styles from "../../../styles/Blog.module.css"
-import { getCollection } from "astro:content"
+import { CollectionEntry, getCollection } from "astro:content"
+import { micromark } from "micromark"
 import categories from "../../../categories"
 import Divider from "../../../components/Divider.astro"
+type Post = CollectionEntry<"blog">
 
 export const getStaticPaths = async () => {
 	const posts = await getCollection("blog")
@@ -14,13 +16,14 @@ export const getStaticPaths = async () => {
 		props: {
 			filteredPosts: properties.default
 				? posts
-				: posts.filter((post) => post.data.category == category)
+				: posts.filter((post) => post.data.category == category),
+			categoryProperties: properties
 		}
 	}))
 }
 
 const { category } = Astro.params
-const { filteredPosts } = Astro.props
+const { filteredPosts, categoryProperties } = Astro.props
 ---
 
 <Layout page="Blog" description="The blog of Henry Hiles">
@@ -51,13 +54,13 @@ const { filteredPosts } = Astro.props
 				<h1>Welcome to the blog!</h1>
 				<Divider />
 				<p>
-					Hello, and welcome to my blog. I post about Discord Bot
-					Development, Web Development, Linux, and other Tech-related
-					subjects. You can filter and search in the sidebar.
+					<Fragment
+						set:html={micromark(categoryProperties.description)}
+					/>
 				</p>
 			</article>
 			{
-				filteredPosts.map((post) => (
+				filteredPosts.map((post: Post) => (
 					<a
 						class={styles.link}
 						href={`/blog/${post.slug}`}
