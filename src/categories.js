@@ -8,7 +8,7 @@ export default Object.entries({
 	linux: {
 		title: "Linux",
 		description:
-			"Linux is an operating system that has existed since the 1990s, and is used extensively, from Android in your phones which is linux-based to the over 40% of websites running on linux."
+			"Linux is an operating system that has existed since the 1990s, and is used extensively, from Android in your phones (which is linux-based), to the over 40% of websites running on linux."
 	},
 	web: { title: "Web Development", description: "Web Development" },
 	bot: {

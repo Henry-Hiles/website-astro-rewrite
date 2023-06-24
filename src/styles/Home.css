@@ -2,13 +2,8 @@ main > section {
 	min-height: 80vh;
 }
 
-main > section > :is(h1, h2) {
-	font-size: 2.5rem;
+main > section > h2 {
+	font-size: 3rem;
 	margin: 0;
 	text-align: center;
-	text-transform: uppercase;
-}
-
-main {
-	padding-bottom: 10rem;
 }
