@@ -51,7 +51,12 @@ const { filteredPosts, categoryProperties } = Astro.props
 		</aside>
 		<div class={styles.right}>
 			<article class={styles.description}>
-				<h1>Welcome to the blog!</h1>
+				<h1>
+					{
+						categoryProperties.descriptionTitle ||
+							categoryProperties.title
+					}
+				</h1>
 				<Divider />
 				<p>
 					<Fragment
