@@ -3,6 +3,7 @@ import styles from "../styles/BlogPost.module.css"
 import Divider from "../components/Divider.astro"
 
 import { CollectionEntry, getCollection } from "astro:content"
+import { micromark } from "micromark"
 interface Props {
 	post: CollectionEntry<"blog">
 	standalone?: Boolean
@@ -32,7 +33,13 @@ const next = blog[index + 1]
 	</h2>
 	<Divider />
 	<article class={styles.description}>
-		{standalone ? <Content /> : post.description}
+		{
+			standalone ? (
+				<Content />
+			) : (
+				<Fragment set:html={micromark(post.description)} />
+			)
+		}
 	</article>
 	{standalone ? "" : <span class={styles.more}>Read More</span>}
 	{

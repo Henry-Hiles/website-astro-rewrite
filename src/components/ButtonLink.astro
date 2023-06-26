@@ -9,11 +9,6 @@ export interface Props {
 const { href, newTab } = Astro.props
 ---
 
-<a
-	href={href}
-	class={styles.button}
-	target={newTab ? "_blank" : ""}
-	rel={newTab ? "noreferrer" : ""}
->
+<a href={href} class={styles.button} target={newTab ? "_blank" : ""}>
 	<slot />
 </a>

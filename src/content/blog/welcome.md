@@ -1,8 +1,8 @@
 ---
 title: "Welcome to my blog!"
-pubDate: 1687027268667
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+pubDate: 1687786534687
+description: "Welcome to my blog! I will be aiming to post 2-3 articles per week, with topics including Linux, Web Development, and Discord Bot Development. This blog also has an RSS Feed, which you can find here: [RSS Feed](/blog/rss.xml)."
 category: "other"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Welcome to my blog! I will be aiming to post 2-3 articles per week, with topics including Linux, Web Development, and Discord Bot Development. This blog also has an RSS Feed, which you can find here: [RSS Feed](/blog/rss.xml). You can also follow my <a href="https://mastodon.social/@QuadRadical" target="_blank">Mastodon account</a> for more news.

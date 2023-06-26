@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Layout.astro"
 import BlogPost from "../../../components/BlogPost.astro"
 import styles from "../../../styles/Blog.module.css"
+import { Icon } from "astro-icon"
 import { CollectionEntry, getCollection } from "astro:content"
 import { micromark } from "micromark"
 import categories from "../../../categories"
@@ -51,6 +52,11 @@ const { filteredPosts, categoryProperties } = Astro.props
 		</aside>
 		<div class={styles.right}>
 			<article class={styles.description}>
+				<section class={styles.rss}>
+					<a href="/blog/rss.xml">
+						<Icon name="mdi:rss-box" />
+					</a>
+				</section>
 				<h1>
 					{
 						categoryProperties.descriptionTitle ||

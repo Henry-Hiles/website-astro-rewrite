@@ -3,9 +3,12 @@ import { rssSchema } from "@astrojs/rss"
 
 const blogCollection = defineCollection({
 	type: "content",
-	schema: rssSchema.extend({
-		category: z.enum(["web", "bot", "linux", "other"])
-	})
+	schema: rssSchema
+		.extend({
+			category: z.enum(["web", "bot", "linux", "other"]),
+			description: z.string()
+		})
+		.augment()
 })
 
 const projectsCollection = defineCollection({

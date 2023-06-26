@@ -36,7 +36,13 @@ main {
 	align-items: center;
 }
 
-:is(article, section, aside):not(section *, nav *, header *, aside *) {
+:is(article, section, aside):not(
+		section *,
+		nav *,
+		article *,
+		header *,
+		aside *
+	) {
 	display: flex;
 	flex-direction: column;
 	border-radius: 1rem;
@@ -47,7 +53,13 @@ main {
 	transition: scale 0.2s;
 }
 
-:is(article, section, aside):not(section *, nav *, header *, aside *):hover {
+:is(article, section, aside):not(
+		section *,
+		header *,
+		nav *,
+		aside *,
+		article *
+	):hover {
 	scale: 101.5%;
 }
 
