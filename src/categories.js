@@ -14,7 +14,7 @@ export default Object.entries({
 	web: {
 		title: "Web Development",
 		description:
-			"There are over 2 billion websites, and the number is only increasing. I post articles here about making static sites with Astro, creating webapps with Next.JS, and more. [Order a custom website from me here](/#hire)."
+			"There are over 2 billion websites, and the number is only increasing. I post articles here about CSS and HTML tips, making static sites or webapps with Astro / Next.JS, Web Development news, and more. [Order a custom website from me here](/#hire)."
 	},
 	bot: {
 		title: "Discord Bot Development",

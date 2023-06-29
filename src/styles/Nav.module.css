@@ -47,7 +47,7 @@
 	color: var(--primary-text);
 }
 
-@media (max-width: 510px) {
+@media (max-width: 525px) {
 	.nav {
 		position: unset;
 	}
