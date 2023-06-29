@@ -9,12 +9,12 @@ export default Object.entries({
 	linux: {
 		title: "Linux",
 		description:
-			"Linux is an operating system that has existed since the 1990s, and is what I use on my PC daily. Linux is used extensively, from Android (which is Linux-based) in your phones, to the over 40% of websites running on Linux."
+			"I use Linux on my PC daily, ever since I switched from Windows many years ago. I use Arch Linux currently, but I sometimes distrohop. You can find my dotfiles [here](https://github.com/Henry-Hiles/dotfiles)."
 	},
 	web: {
 		title: "Web Development",
 		description:
-			"Web Development impacts all of our lives daily, from ordering a package from Amazon to looking at this blog. There are over 2 billion (2,000,000,000) websites in the world, and that number is only increasing. [You can order a custom website from me here](/#hire)."
+			"There are over 2 billion websites, and the number is only increasing. I post articles here about making static sites with Astro, creating webapps with Next.JS, and more. [Order a custom website from me here](/#hire)."
 	},
 	bot: {
 		title: "Discord Bot Development",
@@ -24,6 +24,6 @@ export default Object.entries({
 	other: {
 		title: "Other",
 		description:
-			"This section of my blog is for all my articles that don't fit into any other catagories."
+			"This section of my blog is for all my articles that don't fit into any of the other catagories."
 	}
 })
