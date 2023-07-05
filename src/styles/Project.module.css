@@ -24,6 +24,7 @@
 
 .image img {
 	max-height: 450px;
+	max-width: 100%;
 	padding: 0;
 	border-radius: 0.5rem;
 	border: 3px solid var(--primary);
