@@ -72,14 +72,7 @@ const { filteredPosts, categoryProperties } = Astro.props
 			</article>
 			{
 				filteredPosts.map((post: Post) => (
-					<a
-						class={styles.link}
-						href={`/blog/${post.slug}`}
-						data-title={post.data.title}
-						data-category={post.data.category}
-					>
-						<BlogPost post={post} standalone={false} />
-					</a>
+					<BlogPost post={post} standalone={false} />
 				))
 			}
 		</div>

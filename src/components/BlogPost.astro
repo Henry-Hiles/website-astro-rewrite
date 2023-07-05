@@ -41,7 +41,7 @@ const next = blog[index + 1]
 			)
 		}
 	</article>
-	{standalone ? "" : <span class={styles.more}>Read More</span>}
+	{standalone ? "" : <a href=`/blog/${postEntry.slug}` class={styles.more}>Read More</span>}
 	{
 		standalone ? (
 			<section class={styles.links}>
