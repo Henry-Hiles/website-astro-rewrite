@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1920"
+   width="1300"
    height="300"
-   viewBox="0 0 508 79.375042"
+   viewBox="0 0 343.95833 79.375042"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -27,34 +27,36 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.22627417"
-     inkscape:cx="470.66795"
-     inkscape:cy="128.1631"
-     inkscape:window-width="1904"
-     inkscape:window-height="1003"
+     inkscape:zoom="0.45254834"
+     inkscape:cx="609.8796"
+     inkscape:cy="262.95533"
+     inkscape:window-width="948"
+     inkscape:window-height="995"
      inkscape:window-x="35"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="text404"
      showguides="true" /><defs
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.3615px;line-height:1;font-family:'RobotoMono Nerd Font';-inkscape-font-specification:'RobotoMono Nerd Font, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:1848.28;display:inline;fill:#ffffff;stroke-width:0"
-       x="379.51074"
-       y="77.970657"
-       id="text186"
-       transform="matrix(0.52101046,0,0,0.52101046,75.912805,12.534621)"><tspan
-         x="379.51074"
-         y="77.970657"
-         id="tspan853">Henry Hiles
-</tspan></text><g
+     id="layer1"><g
        aria-label="❯"
        id="text404"
-       style="font-size:53.9513px;line-height:0;font-family:PowerlineSymbols;-inkscape-font-specification:'PowerlineSymbols, Normal';text-align:center;text-anchor:middle;fill:#4e94e4;stroke-width:0;fill-opacity:1"
-       transform="matrix(0.71513712,0,0,0.71513712,72.355178,11.305519)"><path
-         d="M -1.353398e-5,59.822301 17.702757,32.84665 -1.353398e-5,5.870999 H 11.907207 l 17.38665,26.975651 -17.38665,26.975651 z"
-         id="path1347"
-         style="fill:#4e94e4;fill-opacity:1" /></g></g></svg>
+       style="font-size:53.9513px;line-height:0;font-family:PowerlineSymbols;-inkscape-font-specification:'PowerlineSymbols, Normal';text-align:center;text-anchor:middle;fill:#4e94e4;fill-opacity:1;stroke-width:0"
+       transform="matrix(0.71513712,0,0,0.71513712,29.930782,11.21462)"><g
+         id="g178"
+         transform="translate(4.2569487)"><text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.3615px;line-height:1;font-family:'RobotoMono Nerd Font';-inkscape-font-specification:'RobotoMono Nerd Font, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:1848.28;display:inline;fill:#ffffff;stroke-width:0"
+           x="379.51074"
+           y="77.970657"
+           id="text186"
+           transform="matrix(0.72854624,0,0,0.72854624,-56.283152,1.7186941)"><tspan
+             x="379.51074"
+             y="77.970657"
+             id="tspan189">Henry Hiles
+</tspan></text><path
+           d="M -8.51391,59.822301 9.1888605,32.84665 -8.51391,5.870999 H 3.3933105 L 20.779961,32.84665 3.3933105,59.822301 Z"
+           id="path1347"
+           style="fill:#4e94e4;fill-opacity:1" /></g></g></g></svg>

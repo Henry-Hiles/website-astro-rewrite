@@ -13,7 +13,8 @@
 
 #jumbo #logoLong {
 	width: 60rem;
-	max-width: 100%;
+	width: 100%;
+	max-width: 35rem;
 }
 
 #jumbo #shortAbout {
