@@ -42,8 +42,7 @@ const { filteredPosts, categoryProperties } = Astro.props
 									? styles.selected
 									: ""
 							}`}
-							href={`/blog/${properties.default ? "" : id}`}
-						>
+							href={properties.default ? "/blog" : `/blog/${id}`}>
 							{properties.title}
 						</a>
 					))
