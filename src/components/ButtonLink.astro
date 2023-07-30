@@ -3,12 +3,18 @@ import styles from "../styles/Button.module.css"
 
 export interface Props {
 	href: string
+	title?: string
 	newTab?: boolean
 }
 
-const { href, newTab } = Astro.props
+const { href, newTab, title } = Astro.props
 ---
 
-<a href={href} class={styles.button} target={newTab ? "_blank" : ""}>
+<a
+	href={href}
+	class={styles.button}
+	title={title}
+	target={newTab ? "_blank" : ""}
+>
 	<slot />
 </a>

@@ -5,12 +5,14 @@ import styles from "../styles/Top.module.css"
 ---
 
 <div class={styles.up} aria-hidden="true" id="up">
-	<ButtonLink href="#"><Icon name="mdi:arrow-up" /></ButtonLink>
+	<ButtonLink href="#" title="Back to top">
+		<Icon name="mdi:arrow-up" />
+	</ButtonLink>
 
 	<script>
 		const up = document.querySelector("#up")
 		document.addEventListener("scroll", () =>
-			up.setAttribute("aria-hidden", window.scrollY == 0)
+			up?.setAttribute("aria-hidden", (window.scrollY == 0).toString())
 		)
 	</script>
 </div>
