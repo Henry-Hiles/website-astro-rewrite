@@ -1,7 +1,7 @@
 ---
 title: "Google Cybersecurity Professional Certificate Notes - Foundations of Cybersecurity"
 pubDate: 1693504647295
-description: "Welcome to my blog! I will be aiming to publish articles with topics including Linux, Web Development, and Discord Bot Development. This blog also has an RSS Feed, which you can find here: [RSS Feed](/blog/rss.xml)."
+description: "Hello, and welcome to my blog. This series contains all of my notes for the [Google Cybersecurity Professional Certificate from Coursera](https://www.coursera.org/professional-certificates/google-cybersecurity)."
 category: "other"
 ---
 
