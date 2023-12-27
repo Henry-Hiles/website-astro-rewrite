@@ -293,4 +293,4 @@ Hello, and welcome to my blog. This series contains all of my notes for the [Goo
 
 -   An intrusion detection system (IDS) is software that monitors system activity and alerts about possible intrusions.
 
-### That's all for this course, see you in the next article.
+### That's all for this module, see you in [the next article](play-it-safe-manage-security-risks).
